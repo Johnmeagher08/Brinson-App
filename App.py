@@ -44,7 +44,7 @@ if api_key and file:
     st.dataframe(df[['Sector', 'Alloc_Eff', 'Sel_Eff', 'Inter_Eff', 'Total_Eff']].round(3))
     
     # Polished Waterfall Chart
-    fig = go.Figure(go.Waterfall(
+    fig.add_annotation(text=f"{contrib*100:.1f}%", ...)
         name="Attribution",
         orientation="v",
         measure=["relative"] * len(df),
