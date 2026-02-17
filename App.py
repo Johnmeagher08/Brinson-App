@@ -1,4 +1,4 @@
-%%writefile app.py
+
 import streamlit as st
 import anthropic
 import pandas as pd
@@ -11,7 +11,7 @@ st.title("📊 Brinson Attribution Analyzer")
 st.markdown("Upload FactSet CSV → Get analysis + waterfall chart")
 
 # Sidebar
-api_key = st.sidebar.text_input("Claude API Key", type="password")
+api_key = st.sidebar.text_input("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", type="password")
 file = st.sidebar.file_uploader("FactSet Attribution CSV", type=['csv'])
 
 if api_key and file:
