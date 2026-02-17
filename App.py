@@ -54,7 +54,10 @@ if api_key and file:
         decreasing={"marker": {"color": "red"}},
         increasing={"marker": {"color": "green"}},
         totals_name="Net Attribution"
-    ))
+   # Create waterfall chart
+fig = go.Figure(go.Waterfall(
+    name="Brinson",
+    orientation="v
     fig.update_layout(title="Brinson Waterfall: Fund vs Benchmark", height=500)
     st.plotly_chart(fig, use_container_width=True)
     
